@@ -24,17 +24,28 @@ import Profile from "../IMAGES/Container/Profile.png"
 import Image from 'next/image';
 import  MainPage from "../MAINPAGE/mainpage"
 import MainPage2 from "../MAINPAGE2/mainpage2"
-import Footer from "../FOOTER/Footer"
+import BasicTable from "../FOOTER/Footer"
+import PlatForm from '../PLATFORM/Platform';
+import logo from "../IMAGES/Container/logo.png";
+import Component8 from "../IMAGES/Container/Component8.png";
+import trendup from "../IMAGES/Container/trendup.png";
+import Icon from "../IMAGES/Container/Icon.png";
+import cube from "../IMAGES/Container/cube.png";
+import stop from "../IMAGES/Container/stop.png";
+import arrorright from "../IMAGES/Container/arrorright.png";
+import setting from "../IMAGES/Container/setting.png";
+import logout from "../IMAGES/Container/logout.png";
+import Vector from "../IMAGES/Container/Vector.png";
+import { CiLight } from "react-icons/ci";
+
+
 
 const drawerWidth = 240;
-// const user = Profile
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   outline:"#E1DFDF solid 1px", 
   borderRadius:"20px", 
-   background:"#ffffff",
-  // borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: "#ffffff",
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
@@ -101,7 +112,7 @@ const AppBar = styled(MuiAppBar, {
     duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
+    width: `calc(114% - ${drawerWidth}px)`,
     marginLeft: `${drawerWidth}px`,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
@@ -134,7 +145,7 @@ export default function PersistentDrawerLeft() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{background:"#fff"}}>
+      <AppBar position="fixed" open={open} sx={{background:"#FAFAFA"}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -145,7 +156,8 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{color:"#26282C", mr:"12.3rem",fontWeight:"600",}} >
+          {/* <Image src={logo} alt="" /> */}
+          <Typography variant="h6" noWrap component="div" sx={{color:"#26282C", ml:"1rem", mr:"23rem",fontWeight:"600",}} >
           Dashboard
           </Typography>
         <Search>
@@ -164,10 +176,10 @@ export default function PersistentDrawerLeft() {
       </AppBar>
       <Drawer
         sx={{
-          width: drawerWidth,
+          width: "4rem",
           flexShrink: 0,
           '& .MuiDrawer-paper': {
-            width: drawerWidth,
+            width: "4rem",
             boxSizing: 'border-box',
           },
         }}
@@ -175,47 +187,61 @@ export default function PersistentDrawerLeft() {
         anchor="left"
         open={open}
       >
-        <DrawerHeader>
+        <DrawerHeader sx={{background:"#FAFAFA",}}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
+       
+        <List  sx={{background:"#FAFAFA", }}>
+              <ListItemButton >
+                   <Image src={Component8} alt="" />
               </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
+              <Image src={trendup} alt="" />
               </ListItemButton>
-            </ListItem>
-          ))}
+              <ListItemButton sx={{ml:"-0.7rem"}}>
+              <Image src={Icon} alt="" />
+              </ListItemButton>
+              <ListItemButton sx={{ml:"-0.7rem"}}>
+              <Image src={cube} alt="" />
+              </ListItemButton>
+              <ListItemButton sx={{ml:"-0.7rem"}}>
+              <Image src={stop} alt="" />
+              </ListItemButton>
+              <Box sx={{background:"#fff", borderRadius:"14px", padding:"3px"}}>
+              <ListItemButton sx={{ml:"-0.7rem",}}>
+              <CiLight />
+              </ListItemButton>
+              <ListItemButton sx={{ml:"-0.2rem"}}>
+              <Image src={Vector} alt="" />
+              </ListItemButton>
+              </Box>
+
+              <Box sx={{mt:"4rem"}}>
+              <ListItemButton sx={{ml:"-0.7rem"}}>
+              <Image src={arrorright} alt="" />
+              </ListItemButton>
+              <ListItemButton sx={{ml:"-0.7rem"}}>
+              <Image src={setting} alt="" />
+              </ListItemButton>
+              <ListItemButton sx={{ml:"-0.3rem"}}>
+              <Image src={logout} alt="" />
+              </ListItemButton>
+              </Box>
         </List>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
         <Box>
-        <Box sx={{display:"flex", gap:"1rem",}}>
+        <Box sx={{display:"flex", gap:"1rem",flexDirection:{md:"row", xs:"column"}}}>
           <MainPage />
           <MainPage2 />
         </Box>
-        <Box>
-          <Footer />
+        <Box sx={{display:"flex", gap:"1rem", flexDirection:{md:"row", xs:"column"}}}>
+          <BasicTable />
+          <PlatForm />
         </Box>
         </Box>
       </Main>

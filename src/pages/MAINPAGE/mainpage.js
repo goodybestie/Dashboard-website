@@ -5,17 +5,17 @@ import Bar from "../IMAGES/Container/Bar.png"
 import Image from "next/image";
 export default function MainPage(){
     return(
-        <Box sx={{background:"#ffffff", padding:"1rem",borderRadius:"14px", width:"52%", height:"22rem"}}>
+        <Box sx={{background:"#ffffff", padding:"1rem",borderRadius:"14px", width:{md:"64%", xs:"50%"}, height:"22rem"}} >
         <Box sx={{ display:"flex", justifyContent:"space-around"}}>
             <Box >
-            <Typography sx={{color:"#000", fontWeight:"600", fontSize:"18px",marginLeft:"-8rem",}}>
+            <Typography sx={{color:"#000", fontWeight:"600", fontSize:"18px",marginLeft:"-11rem",}}>
             Sales Trends
             </Typography>
             </Box>
             <Box sx={{
                 display:" flex", 
                 gap:"8px", 
-                marginRight:"-8rem",
+                marginRight:"-10rem",
                
             }}>
             <Box>
@@ -41,7 +41,7 @@ export default function MainPage(){
         </Box>
         <Box>
             <Box sx={{display:"flex", mt:"1rem", gap:"10px" }}>
-                <Box sx={{display:"flex", flexDirection:"column", gap:"1rem"}}>
+                <Box sx={{display:"flex", flexDirection:"column", gap:"1rem", color:"#898989"}}>
                     <Typography>50.000</Typography>
                     <Typography>40.000</Typography>
                     <Typography>30.000</Typography>
@@ -51,11 +51,11 @@ export default function MainPage(){
                     <Typography>0.000</Typography>
                 </Box>
                 <Box>
-                    <Image src={Line} alt="" style={{width:"29rem"}}/>
-                    <Image src={Bar} alt="" style={{width:"29rem", marginTop:"-20rem",marginBottom:"24px"}}/>
+                    <Image src={Line} alt="" style={{width:"39rem"}}/>
+                    <Image src={Bar} alt="" style={{width:"39rem", marginTop:"-20rem",marginBottom:"24px"}}/>
                 </Box>
             </Box>
-            <Box sx={{display:"flex",  gap:"0.8rem", ml:"3.9rem", mt:"-1.4rem",}}>
+            <Box sx={{display:"flex",  gap:"1.7rem", ml:"3.9rem", mt:"-1.4rem", color:"#898989"}}>
                 <Typography>Jan</Typography>
                 <Typography>Feb</Typography>
                 <Typography>Mar</Typography>

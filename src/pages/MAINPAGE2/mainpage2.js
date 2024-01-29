@@ -8,18 +8,18 @@ import { IoMdTrendingUp } from "react-icons/io";
 
 export default function MainPage2(){
     return(
-        <Box sx={{}}>
-            <Box sx={{display:"flex", gap:"1rem"}}>
+        <Box  >
+            <Box sx={{display:"flex", flexDirection:{md:"row", xs:"column"}, gap:"1rem"}}>
                 <Box sx={{background:"#ffffff", padding:"1rem",borderRadius:"14px"}}>
             <Box>
                 <Image src={signal1} alt=""/>
             </Box>
-            <Typography sx={{color:"#898989"}}>Total Order</Typography>
-            <Typography sx={{fontWeight:"600"}}>350</Typography>
+            <Typography sx={{color:"#898989",fontSize:"18px"}}>Total Order</Typography>
+            <Typography sx={{fontWeight:"600", fontSize:"24px"}}>350</Typography>
             <Box sx={{display:"flex", gap:"4px"}}>
             <Box sx={{display:"flex", gap:"2px"}}>
                 <IoMdTrendingUp style={{color:"#34CAA5"}} />
-                <Typography sx={{color:"#34CAA5"}}>23.5%</Typography>
+                <Typography sx={{color:"#34CAA5",}}>23.5%</Typography>
             </Box>
             <Box>
                 <Typography sx={{color:"#898989"}} >vs. previous month</Typography>
@@ -30,8 +30,8 @@ export default function MainPage2(){
             <Box>
                 <Image src={signal2} alt=""/>
             </Box>
-            <Typography sx={{color:"#898989"}}>Total Refund</Typography>
-            <Typography sx={{fontWeight:"600"}}>270</Typography>
+            <Typography sx={{color:"#898989",fontSize:"18px"}}>Total Refund</Typography>
+            <Typography sx={{fontWeight:"600",fontSize:"24px"}}>270</Typography>
             <Box sx={{display:"flex", gap:"4px"}}>
             <Box sx={{display:"flex", gap:"2px"}}>
                 <IoMdTrendingUp style={{color:"#ED544E"}} />
@@ -43,15 +43,15 @@ export default function MainPage2(){
             </Box>
             </Box>
             </Box>
-            <Box sx={{display:"flex", gap:"1rem", mt:"1rem"}}>
+            <Box sx={{display:"flex", flexDirection:{md:"row", xs:"column"}, gap:"1rem", mt:"1rem"}}>
             <Box sx={{display:"flex", gap:"2rem"}}>
             <Box sx={{background:"#ffffff", padding:"1rem",borderRadius:"14px"}}>
                 <Box>
             <Box>
                 <Image src={signal3} alt=""/>
             </Box>
-            <Typography sx={{color:"#898989"}}>Average Sales</Typography>
-            <Typography sx={{fontWeight:"600"}}>1567</Typography>
+            <Typography sx={{color:"#898989",fontSize:"18px"}}>Average Sales</Typography>
+            <Typography sx={{fontWeight:"600",fontSize:"24px"}}>1567</Typography>
             <Box sx={{display:"flex", gap:"4px"}}>
             <Box sx={{display:"flex", gap:"1px"}}>
                 <IoMdTrendingUp style={{color:"#ED544E"}} />
@@ -68,8 +68,8 @@ export default function MainPage2(){
             <Box>
                 <Image src={signal4} alt=""/>
             </Box>
-            <Typography sx={{color:"#898989"}}>Total Income</Typography>
-            <Typography sx={{fontWeight:"600"}}>$350.000</Typography>
+            <Typography sx={{color:"#898989", fontSize:"18px"}}>Total Income</Typography>
+            <Typography sx={{fontWeight:"600",fontSize:"24px"}}>$350.000</Typography>
             <Box sx={{display:"flex", gap:"4px"}}>
             <Box sx={{display:"flex", gap:"2px"}}>
                 <IoMdTrendingUp style={{color:"#34CAA5"}} />
